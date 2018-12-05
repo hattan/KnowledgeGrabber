@@ -1,0 +1,40 @@
+<html>
+<head>
+  <title>QNA Function</title>
+
+ 
+</head>
+ 
+<body>
+<h1>Knowledge</h1>
+
+<form id="searchForm" method="POST">
+  <label>What is your inquiry:</label>
+  <input id="question" type="text"><br>
+  <input id="change"type="submit"value="Get Knowledge">
+</form>
+
+<span id="msg"></span>
+
+<script src="../KnowledgeGrabber.js"></script>
+<script>
+  var message = document.getElementById("msg"); 
+  var searchForm = document.getElementById("searchForm");
+  var question = document.getElementById("question");
+
+  
+   window.addEventListener("load",function(){
+
+    searchForm.addEventListener("submit",function(event){
+      event.preventDefault();
+
+      var request = new KnowledgeGrabber().getAnswer(question.value);
+      request.then(function(answer){
+        message.innerText = answer;
+      });
+      
+    });
+  });
+  </script>
+</body>
+</html>

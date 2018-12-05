@@ -1,0 +1,21 @@
+<html>
+<head>
+  <title>Basic Example</title>
+</head>
+ 
+<body>
+
+<script src="../KnowledgeGrabber.js"></script>
+<script>
+
+  var question = 'what is the meaning of life?';
+  var grabber = new KnowledgeGrabber();
+  var request = grabber.getAnswer(question);
+
+  request.then(function(answer){
+    console.log(answer);
+  });
+      
+  </script>
+</body>
+</html>
