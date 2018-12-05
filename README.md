@@ -4,8 +4,7 @@
 
 ```javascript
 let question = 'how are you?';
-let grabber = new KnowledgeGrabber().getAnswer(question);
-
+let request = new KnowledgeGrabber().getAnswer(question);
 request.then(function(answer){
   console.log(answer); //42 
 }); 
