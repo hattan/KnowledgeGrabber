@@ -8,4 +8,5 @@ let grabber = new KnowledgeGrabber().getAnswer(question);
 
 request.then(function(answer){
   console.log(answer); //42 
-});```
+}); 
+```
